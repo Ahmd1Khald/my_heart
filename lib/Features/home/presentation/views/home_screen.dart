@@ -39,8 +39,8 @@ class _HomeScreenState extends State<HomeScreen> {
             Object? hrValue =
                 snapshot.data!.child('now').child('heart rate').value;
             print(hrValue);
-            if ((hrValue is int && hrValue > 140) ||
-                (hrValue is int && hrValue < 83)) {
+            if ((hrValue is int && hrValue > 100) ||
+                (hrValue is int && hrValue < 95)) {
               AppFunctions.playAlert();
               isPlayed = true;
               heartRateColor = Colors.red;
@@ -61,7 +61,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       baseColor: Colors.black,
                       highlightColor: Colors.white,
                       child: const Text(
-                        'Hearty App',
+                        'O2 App',
                         style: TextStyle(
                           color: Colors.black,
                           fontWeight: FontWeight.bold,
@@ -104,11 +104,11 @@ class _HomeScreenState extends State<HomeScreen> {
                                 width: 3,
                                 color: Colors.black,
                               )),
-                          child: Row(
+                          child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Text(
-                                '$hrValue',
+                                '$hrValue %',
                                 style: TextStyle(
                                   color: heartRateColor,
                                   fontWeight: FontWeight.bold,
@@ -117,7 +117,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               ),
                               Image.asset(
                                 AssetsManager.heartRate,
-                                width: MediaQuery.of(context).size.width * 0.33,
+                                width: MediaQuery.of(context).size.width * 0.3,
                               ),
                             ],
                           ),
