@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyBcPyFoZs8_OHT7iSi6Ge_xWKxOpTI_GIE</string>
+	<key>GCM_SENDER_ID</key>
+	<string>815226150363</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.myHeart</string>
+	<key>PROJECT_ID</key>
+	<string>my-heart-rate</string>
+	<key>STORAGE_BUCKET</key>
+	<string>my-heart-rate.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:815226150363:ios:8c23804b5b50a115399bfe</string>
+	<key>DATABASE_URL</key>
+	<string>https://my-heart-rate-default-rtdb.firebaseio.com</string>
+</dict>
+</plist>

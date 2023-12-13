@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "815226150363",
+    "firebase_url": "https://my-heart-rate-default-rtdb.firebaseio.com",
+    "project_id": "my-heart-rate",
+    "storage_bucket": "my-heart-rate.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:815226150363:android:a6836fc1ea71545e399bfe",
+        "android_client_info": {
+          "package_name": "com.example.my_heart"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDh71tIo2-Xj1QGM53JyOGY1f2wLcjBuWE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
