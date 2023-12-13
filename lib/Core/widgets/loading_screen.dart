@@ -15,7 +15,8 @@ class LoadingScreen extends StatelessWidget {
           itemBuilder: (BuildContext context, int index) {
             return DecoratedBox(
               decoration: BoxDecoration(
-                color: index.isEven ? Colors.grey[600] : AllColors.primaryColor,
+                shape: BoxShape.circle,
+                color: index.isEven ? Colors.grey[400] : AllColors.primaryColor,
               ),
             );
           },
