@@ -36,12 +36,13 @@ class _HomeScreenState extends State<HomeScreen> {
         if (snapshot.hasData) {
           DataSnapshot? data = snapshot.data;
           if (data!.value != null) {
-            Object? hrValue =
+            Object? o2Value =
                 snapshot.data!.child('now').child('Oximeter SpO2 Value').value;
-            print(hrValue);
-            if ((hrValue is int && hrValue > 100) ||
-                (hrValue is int && hrValue < 95)) {
+            print(o2Value);
+            if ((o2Value is int && o2Value > 100) ||
+                (o2Value is int && o2Value < 95)) {
               AppFunctions.playAlert();
+              AppFunctions.sendAlertMessage(ratio: o2Value);
               isPlayed = true;
               heartRateColor = Colors.red;
             } else {
@@ -108,7 +109,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Text(
-                                '$hrValue %',
+                                '$o2Value %',
                                 style: TextStyle(
                                   color: heartRateColor,
                                   fontWeight: FontWeight.bold,
@@ -125,10 +126,48 @@ class _HomeScreenState extends State<HomeScreen> {
                         const SizedBox(
                           height: 30,
                         ),
-                        if ((hrValue is int && hrValue > 100) ||
-                            (hrValue is int && hrValue < 95))
+                        if ((o2Value is int && o2Value > 100) ||
+                            (o2Value is int && o2Value < 95))
                           StopPlayAlert(
                             isPlayed1: isPlayed,
+                          ),
+                        const SizedBox(
+                          height: 20,
+                        ),
+                        if ((o2Value is int && o2Value > 100) ||
+                            (o2Value is int && o2Value < 95))
+                          Container(
+                            width: MediaQuery.of(context).size.width * 0.7,
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(0),
+                                border: Border.all(
+                                  color: Colors.black,
+                                  width: 2,
+                                )),
+                            child: MaterialButton(
+                              height: MediaQuery.of(context).size.width * 0.14,
+                              onPressed: () {
+                                AppFunctions.sendAlertMessage(ratio: o2Value);
+                              },
+                              child: const Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text(
+                                    'Share your state',
+                                    style: TextStyle(
+                                      color: Colors.blue,
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 24,
+                                    ),
+                                  ),
+                                  Icon(
+                                    Icons.share,
+                                    color: Colors.blue,
+                                    size: 28,
+                                  ),
+                                ],
+                              ),
+                            ),
                           ),
                       ],
                     ),

@@ -1,5 +1,6 @@
 import 'package:assets_audio_player/assets_audio_player.dart';
 import 'package:flutter/material.dart';
+import 'package:share/share.dart';
 
 class AppFunctions {
   static void pushTo({required context, required Widget screen}) {
@@ -28,5 +29,14 @@ class AppFunctions {
     } catch (e) {
       print('Error: $e');
     }
+  }
+
+  static void sendAlertMessage({
+    required int ratio,
+  }) {
+    Share.share(
+      'Your state is in danger!!\nThe oxygen levels have reached a concerning level of $ratio%\nPlease help urgently.',
+      subject: '',
+    );
   }
 }
