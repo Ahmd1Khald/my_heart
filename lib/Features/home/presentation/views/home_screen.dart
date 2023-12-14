@@ -37,7 +37,7 @@ class _HomeScreenState extends State<HomeScreen> {
           DataSnapshot? data = snapshot.data;
           if (data!.value != null) {
             Object? hrValue =
-                snapshot.data!.child('now').child('heart rate').value;
+                snapshot.data!.child('now').child('Oximeter SpO2 Value').value;
             print(hrValue);
             if ((hrValue is int && hrValue > 100) ||
                 (hrValue is int && hrValue < 95)) {
@@ -125,8 +125,8 @@ class _HomeScreenState extends State<HomeScreen> {
                         const SizedBox(
                           height: 30,
                         ),
-                        if ((hrValue is int && hrValue > 140) ||
-                            (hrValue is int && hrValue < 83))
+                        if ((hrValue is int && hrValue > 100) ||
+                            (hrValue is int && hrValue < 95))
                           StopPlayAlert(
                             isPlayed1: isPlayed,
                           ),
