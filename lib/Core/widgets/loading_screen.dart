@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 
-import '../constance/all_colors.dart';
+import '../constance/app_colors.dart';
 
 class LoadingScreen extends StatelessWidget {
   const LoadingScreen({Key? key}) : super(key: key);
@@ -16,7 +16,7 @@ class LoadingScreen extends StatelessWidget {
             return DecoratedBox(
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
-                color: index.isEven ? Colors.grey[400] : AllColors.primaryColor,
+                color: index.isEven ? Colors.grey[400] : AppColors.primaryColor,
               ),
             );
           },

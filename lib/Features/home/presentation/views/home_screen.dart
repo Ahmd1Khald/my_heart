@@ -1,6 +1,6 @@
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
-import 'package:my_heart/Core/constance/all_colors.dart';
+import 'package:my_heart/Core/constance/app_colors.dart';
 import 'package:my_heart/Core/constance/app_function.dart';
 import 'package:my_heart/Features/home/presentation/views/widgets/stop_and_play_alert_button.dart';
 import 'package:shimmer/shimmer.dart';
@@ -51,7 +51,7 @@ class _HomeScreenState extends State<HomeScreen> {
             }
             return Scaffold(
               appBar: AppBar(
-                backgroundColor: AllColors.primaryColor,
+                backgroundColor: AppColors.primaryColor,
                 centerTitle: true,
                 title: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
